@@ -1,0 +1,35 @@
+import React, { Component } from "react";
+import { getSkills } from "../actions/actions";
+import { connect } from "react-redux";
+
+class Skills extends Component {
+  componentDidMount() {
+    this.props.getSkills();
+  }
+
+  render() {
+    const { skills = [] } = this.props;
+
+    return (
+      <div>
+        <h1>Skills</h1>
+        {skills.map(skill => (
+          <li key={skill._id}>
+            <a href={"skills/" + skill._id}>
+              {skill.name} {skill.surname}
+            </a>
+          </li>
+        ))}
+      </div>
+    );
+  }
+}
+
+const mapStateToProps = state => ({
+  skills: state.skillReducer.skills
+});
+
+export default connect(
+  mapStateToProps,
+  { getSkills }
+)(Skills);
