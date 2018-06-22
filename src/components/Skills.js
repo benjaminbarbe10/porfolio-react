@@ -15,9 +15,7 @@ class Skills extends Component {
         <h1>Skills</h1>
         {skills.map(skill => (
           <li key={skill._id}>
-            <a href={"skills/" + skill._id}>
-              {skill.name} {skill.surname}
-            </a>
+            {skill.name} {skill.surname}
           </li>
         ))}
       </div>

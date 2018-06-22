@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./assets/stylesheets/index.css";
+
 import App from "./App";
 import "react-mdl/extra/material.css";
 import "react-mdl/extra/material.js";

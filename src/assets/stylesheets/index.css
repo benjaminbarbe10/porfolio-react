@@ -1,0 +1,78 @@
+.PageLayout {
+  background-image: url("../images/background.jpg");
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  z-index: -999999;
+}
+
+/* ──────────────────────────────────────────────
+
+MOBILE MENU
+
+──────────────────────────────────────────────*/
+
+.MenuContent {
+  color: #fff;
+}
+
+.MenuContent:hover {
+  color: dodgerblue;
+}
+
+/* ──────────────────────────────────────────────
+
+REACT BURGER MENU OPTIONS
+
+──────────────────────────────────────────────*/
+/* Position and sizing of burger button */
+.bm-burger-button {
+  position: fixed;
+  width: 36px;
+  height: 30px;
+  right: 36px;
+  top: 36px;
+}
+.bm-overlay {
+  transition: initial !important;
+  background: initial !important;
+}
+
+/* Color/shape of burger icon bars */
+.bm-burger-bars {
+  background: #fff;
+}
+
+/* Position and sizing of clickable cross button */
+.bm-cross-button {
+  height: 24px;
+  width: 24px;
+}
+
+/* Color/shape of close button cross */
+.bm-cross {
+  background: #bdc3c7;
+}
+
+/* General sidebar styles */
+.bm-menu {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 2.5em 1.5em 0;
+  font-size: 1.15em;
+}
+
+/* Wrapper for item list */
+.bm-item-list {
+  color: #b8b7ad;
+  padding: 0.8em;
+  height: initial !important;
+}
+
+/* Individual item */
+.bm-item {
+  display: inline-block;
+}
+
+.bm-menu-wrap {
+  top: 5em;
+}
