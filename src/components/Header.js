@@ -1,4 +1,5 @@
 import { push as Menu } from "react-burger-menu";
+import { Link } from "react-router-dom";
 import React, { Component } from "react";
 import "../assets/stylesheets/hamburgers.css";
 export default class Header extends React.Component {
@@ -21,6 +22,9 @@ export default class Header extends React.Component {
   render() {
     return (
       <div id="HeaderLayout outer-container">
+        <div className="HeaderLayout-logo">
+          <span>BB</span>
+        </div>
         <Menu
           burgerButtonClassName={"hamburger hamburger--slider-r"}
           customBurgerIcon={
@@ -35,18 +39,20 @@ export default class Header extends React.Component {
           pageWrapId={"page-wrap"}
         >
           <div className="HeaderLayout-menuContent">
-            <a id="home" className="menu-item MenuContent" href="/">
-              Home
-            </a>
-            <a id="about" className="menu-item MenuContent" href="/about">
-              AboutMe
-            </a>
-            <a id="contact" className="menu-item MenuContent" href="/contact">
-              Portfolio
-            </a>
-            <a id="contact" className="menu-item MenuContent" href="/contact">
-              Contact
-            </a>
+            <ul>
+              <li>
+                <Link to="/">Home</Link>
+              </li>
+              <li>
+                <Link to="/about">Adverts</Link>
+              </li>
+              <li>
+                <Link to="/portfolio">Porfolio</Link>
+              </li>
+              <li>
+                <Link to="/contact">Contact</Link>
+              </li>
+            </ul>
           </div>
         </Menu>
         <main id="page-wrap" />

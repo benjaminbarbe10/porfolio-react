@@ -4,6 +4,33 @@
   background-position: center top;
   background-repeat: no-repeat;
   z-index: -999999;
+  filter: brightness(70%);
+  -webkit-filter: brightness(70%);
+}
+
+/* ──────────────────────────────────────────────
+
+HOME PAGE
+
+──────────────────────────────────────────────*/
+
+.HomePage-title {
+  position: absolute;
+  left: 50%;
+  top: 55%;
+  width: 300px;
+  height: 200px;
+  margin-left: -150px;
+  margin-top: -100px;
+}
+
+.HomePage-subTitle {
+  text-align: center;
+  color: #fff;
+  font-family: "Advent Pro", sans-serif;
+  font-size: 1.5em;
+  font-weight: bolder;
+  margin-top: 0.5rem;
 }
 
 /* ──────────────────────────────────────────────
@@ -12,12 +39,61 @@ MOBILE MENU
 
 ──────────────────────────────────────────────*/
 
-.MenuContent {
+.HeaderLayout-menuContent li {
+  padding-bottom: 0.6em;
+  list-style-type: hebrew;
   color: #fff;
+  font-size: 2em;
+  font-family: "Advent Pro", sans-serif;
+}
+
+.HeaderLayout-menuContent a {
+  color: #fff;
+
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+.HeaderLayout-menuContent a:hover {
+  color: #55769a;
+  text-decoration: none;
+  font-weight: bolder;
 }
 
 .MenuContent:hover {
   color: dodgerblue;
+}
+
+.HeaderLayout-logo span {
+  border: #fff solid 3px;
+  border-radius: 100%;
+  font-size: 2.5em;
+  color: #fff;
+  padding: 0.25em;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+.HeaderLayout-logo {
+  padding-top: 2.5em;
+  margin-left: 1em;
+}
+/* ──────────────────────────────────────────────
+
+TITLE COMPONENT
+
+──────────────────────────────────────────────*/
+
+.TitleLayout {
+  text-align: center;
+}
+.TitleLayout-title {
+  text-align: center;
+  border: #fff solid 5px;
+  color: #fff;
+  padding: 0.25em;
+  font-size: 2em;
+  font-family: "Advent Pro", sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
 
 /* ──────────────────────────────────────────────
@@ -74,5 +150,5 @@ REACT BURGER MENU OPTIONS
 }
 
 .bm-menu-wrap {
-  top: 5em;
+  top: 7em;
 }
