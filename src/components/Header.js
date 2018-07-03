@@ -1,6 +1,6 @@
 import { push as Menu } from "react-burger-menu";
 import { Link } from "react-router-dom";
-import React, { Component } from "react";
+import React from "react";
 import "../assets/stylesheets/hamburgers.css";
 export default class Header extends React.Component {
   showSettings(event) {
@@ -44,7 +44,7 @@ export default class Header extends React.Component {
                 <Link to="/">Home</Link>
               </li>
               <li>
-                <Link to="/about">Adverts</Link>
+                <Link to="/about">About Me</Link>
               </li>
               <li>
                 <Link to="/portfolio">Porfolio</Link>

@@ -6,6 +6,13 @@
   z-index: -999999;
   filter: brightness(70%);
   -webkit-filter: brightness(70%);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  margin: initial;
 }
 
 /* ──────────────────────────────────────────────
@@ -38,10 +45,17 @@ HOME PAGE
 MOBILE MENU
 
 ──────────────────────────────────────────────*/
+.HeaderLayout-menuContent {
+  text-align: center;
+}
+
+.HeaderLayout-menuContent ul {
+  padding-left: initial;
+}
 
 .HeaderLayout-menuContent li {
   padding-bottom: 0.6em;
-  list-style-type: hebrew;
+  list-style-type: none;
   color: #fff;
   font-size: 2em;
   font-family: "Advent Pro", sans-serif;
@@ -49,7 +63,6 @@ MOBILE MENU
 
 .HeaderLayout-menuContent a {
   color: #fff;
-
   text-decoration: none;
   transition: color 0.3s ease;
 }
@@ -74,6 +87,7 @@ MOBILE MENU
 .HeaderLayout-logo {
   padding-top: 2.5em;
   margin-left: 1em;
+  padding-bottom: 2.5em;
 }
 /* ──────────────────────────────────────────────
 
@@ -147,8 +161,4 @@ REACT BURGER MENU OPTIONS
 /* Individual item */
 .bm-item {
   display: inline-block;
-}
-
-.bm-menu-wrap {
-  top: 7em;
 }
