@@ -11,7 +11,7 @@ class Skills extends Component {
     const { skills = [] } = this.props;
 
     return (
-      <div>
+      <div className="PageContent">
         <h1>Skills</h1>
         {skills.map(skill => (
           <li key={skill._id}>
