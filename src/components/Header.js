@@ -3,6 +3,13 @@ import { Link } from "react-router-dom";
 import React from "react";
 import "../assets/stylesheets/hamburgers.css";
 export default class Header extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      isOpen: false
+    };
+  }
+
   showSettings(event) {
     event.preventDefault();
   }
@@ -19,6 +26,10 @@ export default class Header extends React.Component {
     });
   }
 
+  toggleMenu = () => {
+    this.setState({ isOpen: !this.state.isOpen });
+  };
+
   render() {
     return (
       <div id="HeaderLayout outer-container">
@@ -33,10 +44,11 @@ export default class Header extends React.Component {
             </div>
           }
           disableOverlayClick
-          disableCloseOnEsc
           customCrossIcon={false}
           width={"100%"}
           pageWrapId={"page-wrap"}
+          isOpen={this.state.isOpen}
+          onClick={this.toggleMenu}
         >
           <div className="HeaderLayout-menuContent">
             <ul>
